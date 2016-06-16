@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping("admin")
-public class AdminController {
+@RequestMapping("auth")
+public class AuthController {
 
     @RequestMapping(value="/login", method = RequestMethod.GET)
     public void loginGet(){

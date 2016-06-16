@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
     @RequestMapping("/")
     public String home(Model model){
-        model.addAttribute("name", "raintype");
+        model.addAttribute("name", "전연웅");
 
         return "home";
     }
