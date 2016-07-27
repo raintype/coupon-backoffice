@@ -1,5 +1,8 @@
 package com.raintype;
 
+import com.raintype.domain.UserVO;
+import com.raintype.mapper.UserMapper;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +20,12 @@ public class CouponBackofficeApplicationTests {
 	@Autowired
 	private DataSource ds;
 
+	@Autowired
+	private SqlSessionFactory sqlSession;
+
+	@Autowired
+	private UserMapper mapper;
+
 
 	@Test
 	public void contextLoads() {
@@ -27,10 +36,24 @@ public class CouponBackofficeApplicationTests {
 		System.out.println(ds);
 
 		Connection con = ds.getConnection();
-
 		System.out.println(con);
 
 		con.close();
+	}
+
+	@Test
+	public void testSqlSession() throws Exception {
+		System.out.println(sqlSession);
+	}
+
+	@Test
+	public void testLogin()throws Exception{
+		String userid = "raintype";
+		String userpw = "test12";
+
+		UserVO vo = mapper.login(userid, userpw);
+
+		System.out.println(vo);
 	}
 
 }
