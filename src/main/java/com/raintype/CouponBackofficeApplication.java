@@ -12,7 +12,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 @SpringBootApplication
-@MapperScan(value = { "com.raintype.mapper"})
+@MapperScan(value = { "com.raintype.persistence"})
 public class CouponBackofficeApplication {
 
 	public static void main(String[] args) {

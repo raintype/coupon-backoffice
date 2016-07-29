@@ -1,7 +1,5 @@
 package com.raintype;
 
-import com.raintype.domain.UserVO;
-import com.raintype.mapper.UserMapper;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,10 +21,6 @@ public class CouponBackofficeApplicationTests {
 	@Autowired
 	private SqlSessionFactory sqlSession;
 
-	@Autowired
-	private UserMapper mapper;
-
-
 	@Test
 	public void contextLoads() {
 	}
@@ -46,14 +40,6 @@ public class CouponBackofficeApplicationTests {
 		System.out.println(sqlSession);
 	}
 
-	@Test
-	public void testLogin()throws Exception{
-		String userid = "raintype";
-		String userpw = "test12";
 
-		UserVO vo = mapper.login(userid, userpw);
-
-		System.out.println(vo);
-	}
 
 }

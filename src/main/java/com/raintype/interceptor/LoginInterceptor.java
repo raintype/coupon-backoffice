@@ -19,6 +19,19 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception{
         HttpSession session = request.getSession();
         ModelMap modelMap = modelAndView.getModelMap();
+        Object userVO = modelMap.get("userVO");
+
+        if (userVO != null) {
+            logger.info("new login success");
+
+            session.setAttribute(LOGIN, userVO);
+
+            Object dest = session.getAttribute("dest");
+            response.sendRedirect(dest != null ? (String)dest : "/");
+        } else {
+            logger.info("login fail");
+            response.sendRedirect("/auth/login");
+        }
     }
 
     @Override

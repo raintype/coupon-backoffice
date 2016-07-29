@@ -8,58 +8,58 @@ import java.util.Date;
  * Created by raintype on 2016. 7. 27..
  */
 public class UserVO {
-    private Integer userno;
-    private String userid;
-    private String userpw;
-    private String username;
-    private Date regdate;
-    private Date updatedate;
+    private Integer user_no;
+    private String user_id;
+    private String user_pw;
+    private String user_name;
+    private Date reg_date;
+    private Date update_date;
 
-    public Integer getUserno() {
-        return userno;
+    public Integer getUser_no() {
+        return user_no;
     }
 
-    public void setUserno(Integer userno) {
-        this.userno = userno;
+    public void setUser_no(Integer user_no) {
+        this.user_no = user_no;
     }
 
-    public String getUserid() {
-        return userid;
+    public String getUser_id() {
+        return user_id;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid;
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
     }
 
-    public String getUserpw() {
-        return userpw;
+    public String getUser_pw() {
+        return user_pw;
     }
 
-    public void setUserpw(String userpw) {
-        this.userpw = userpw;
+    public void setUser_pw(String user_pw) {
+        this.user_pw = user_pw;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
-    public Date getRegdate() {
-        return regdate;
+    public Date getReg_date() {
+        return reg_date;
     }
 
-    public void setRegdate(Date regdate) {
-        this.regdate = regdate;
+    public void setReg_date(Date reg_date) {
+        this.reg_date = reg_date;
     }
 
-    public Date getUpdatedate() {
-        return updatedate;
+    public Date getUpdate_date() {
+        return update_date;
     }
 
-    public void setUpdatedate(Date updatedate) {
-        this.updatedate = updatedate;
+    public void setUpdate_date(Date update_date) {
+        this.update_date = update_date;
     }
 }
